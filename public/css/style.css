@@ -1,15 +1,136 @@
-#newsletter{
-  background-color: purple;
-  }
-#newsletter img{
-  width: 50px;
+body {
+  margin: 0;
+  padding: 0;
 }
-.logo{
+
+/* Header */
+
+#newsletter {
+  background-color: purple;
+  color: rgba(255, 255, 255, 0.514);
+  height: max-content;
+  display: flex;
+}
+
+#newsletter img {
+  width: 25px;
+}
+
+#newsletter:not(.logo) {
+  justify-content: center;
+}
+
+.logo {
   display: inline-block;
 }
 
-#champs_newsletter div{
+#newsletter div:nth-child(2) {
+
+  justify-content: center;
+}
+
+#champs_newsletter div {
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
+}
+
+#champs_newsletter div button {
+  background-color: rgb(124, 241, 124);
+  border-radius: 5px;
+}
+
+nav {
+  display: flex;
+}
+
+nav .logo {
+  justify-content: flex-start;
+}
+
+nav>div>img {
+  height: 60px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+  border-right: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+nav .menu {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.5)
+}
+
+.menu ul li {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Contenu */
+
+#contenu {
+  margin: 50px 200px;
+}
+
+#contenu h1 {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+  /* width: max-content; */
+}
+
+#contenu ul {
+  list-style: none;
+  margin: 40px
+}
+
+#contenu ul li::before {
+  content: "\2022";
+  color: purple;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  margin-bottom: 1em;
+}
+
+/* footer */
+
+footer {
+  background-color: rgb(59, 59, 59);
+  /* height: auto */
+  text-align: center;
+}
+
+#section {
+  display: flex;
+  justify-content: space-between;
+  align-contents: center;
+  padding: 20px 550px;
+}
+
+footer #section div {
+  margin: 10px auto;
+}
+
+footer #section div a span {
+  color: white;
+}
+
+footer img {
+  height: 50px;
+  margin-top: 50px;
+}
+
+footer p {
+  margin:0;
+  padding: 30px;
+  color:rgba(255, 255, 255, 0.253);
 }
