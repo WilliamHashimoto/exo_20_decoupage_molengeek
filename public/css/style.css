@@ -1,0 +1,15 @@
+#newsletter{
+  background-color: purple;
+  }
+#newsletter img{
+  width: 50px;
+}
+.logo{
+  display: inline-block;
+}
+
+#champs_newsletter div{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
