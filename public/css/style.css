@@ -5,11 +5,15 @@ body {
 
 /* Header */
 
+/* Banner  */
+
 #newsletter {
   background-color: purple;
   color: rgba(255, 255, 255, 0.514);
-  height: max-content;
+  height: 40px;
   display: flex;
+  align-items: center;
+  position: relative;
 }
 
 #newsletter img {
@@ -21,7 +25,9 @@ body {
 }
 
 .logo {
-  display: inline-block;
+  /* display: inline-block; */
+  position: absolute;
+  left:0;
 }
 
 #newsletter div:nth-child(2) {
@@ -40,37 +46,62 @@ body {
   border-radius: 5px;
 }
 
+/* Navbar  */
+
 nav {
   display: flex;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+  padding: 0;
 }
 
+/* Mets le logo à gauche */
 nav .logo {
   justify-content: flex-start;
 }
 
-nav>div>img {
-  height: 60px;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+/* Défini la taille et la bordure du logo */
+nav .logo img {
+  height: 40px;
+  padding: 5px 20px;
   border-right: 1px solid rgba(128, 128, 128, 0.5);
 }
 
+
+/* Mets le menu au centre */
 nav .menu {
   display: flex;
-  justify-content: center;
-  margin: auto;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.5)
+  justify-content: space-between;
+  margin-left: 15;
+}
+
+.menu ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding-left: 350px;
 }
 
 .menu ul li {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin: 0 10px;
+  margin: 0 30px;
+}
+
+.menu ul li:last-of-type {
+  margin-left: 300px;
+  padding-left: 50px;
+  height: 50px;
+  border-left: 1px solid rgba(128, 128, 128, 0.5);
 }
 
 .menu ul li a {
   text-decoration: none;
   color: black;
+}
+
+.menu ul li a:hover {
+  text-decoration: underline;
 }
 
 /* Contenu */
@@ -80,10 +111,22 @@ nav .menu {
 }
 
 #contenu h1 {
-  display: flex;
-  justify-content: center;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
-  /* width: max-content; */
+  margin: 40px auto;
+  text-align: center;
+  font-size: 50px;
+
+}
+
+#contenu h2 {
+  font-size: 30px;
+}
+
+#contenu h1::after {
+  content: '';
+  display: block;
+  margin: 50px auto;
+  border-bottom: 1px solid purple;
+  width: 30px;
 }
 
 #contenu ul {
@@ -105,19 +148,24 @@ nav .menu {
 
 footer {
   background-color: rgb(59, 59, 59);
-  /* height: auto */
   text-align: center;
 }
 
 #section {
   display: flex;
   justify-content: space-between;
-  align-contents: center;
-  padding: 20px 550px;
+  padding: 5px 550px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.178);
 }
 
 footer #section div {
-  margin: 10px auto;
+  margin: 5px auto;
+}
+
+footer #section div a {
+  display: flex;
+  align-items: center;
+  height: 75px;
 }
 
 footer #section div a span {
